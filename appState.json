@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "sigma-001/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (event, context, callback) {\n    cognito_idp.listUsers({\n        UserPoolId: process.env.UserPoolId_cognitomyPool,\n        AttributesToGet: [\n            \"sub\",\n            \"address\",\n            \"gender\",\n            \"family_name\"\n        ],\n        Limit: 10\n    }, function (error, data) {\n        if (error) {\n            callback(error);\n        }\n        callback(null, { \"message\": \"Successfully executed...\" });\n    });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (event, context, callback) {\n    cognito_idp.listUsers({\n        UserPoolId: process.env.UserPoolId_cognitomyPool,\n        AttributesToGet: [\"sub\", \"address\", \"gender\"],\n        Limit: 10\n    }, function (error, data) {\n        if (error) {\n            callback(error);\n        }\n        callback(null, { \"message\": \"Successfully executed...\" });\n    });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -80,6 +80,7 @@
         "config": {
           "mode": 0,
           "name": "myPool",
+          "arn": "arn:aws:cognito-idp:us-east-1:318300609668:userpool/undefined",
           "userPool": {
             "Name": "myPool",
             "isNew": true,
