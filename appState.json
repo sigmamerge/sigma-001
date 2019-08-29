@@ -1,0 +1,77 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "ca16f080-8752-4a8d-aa87-0a646f2040b2": {
+        "id": "ca16f080-8752-4a8d-aa87-0a646f2040b2",
+        "parent": null,
+        "name": "sigma-001",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "12e0d7b3-4779-4a6a-9149-03b0cd37e229"
+        ],
+        "isRemovable": false,
+        "filePath": "sigma-001"
+      },
+      "12e0d7b3-4779-4a6a-9149-03b0cd37e229": {
+        "id": "12e0d7b3-4779-4a6a-9149-03b0cd37e229",
+        "parent": "ca16f080-8752-4a8d-aa87-0a646f2040b2",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "sigma-001/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "ca16f080-8752-4a8d-aa87-0a646f2040b2",
+    "openFiles": [
+      "12e0d7b3-4779-4a6a-9149-03b0cd37e229"
+    ],
+    "currentFileId": "12e0d7b3-4779-4a6a-9149-03b0cd37e229",
+    "resources": {},
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "sigma-001",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1567077058078
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "sigma-001",
+      "url": "https://github.com/sigmamerge/sigma-001"
+    }
+  }
+}
