@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "sigma-001/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (event, context, callback) {\n    cognito_idp.listUsers({\n        UserPoolId: process.env.UserPoolId_cognitomyPool,\n        AttributesToGet: [\"sub\", \"address\", \"family_name\", \"gender\", \"given_name\"],\n        Limit: 10\n    }, function (error, data) {\n        if (error) {\n            callback(error);\n        }\n        callback(null, { \"message\": \"Successfully executed...\" });\n    });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (event, context, callback) {\n    cognito_idp.listUsers({\n        UserPoolId: process.env.UserPoolId_cognitomyPool,\n        AttributesToGet: [\"sub\", \"address\", \"family_name\", \"gender\"],\n        Limit: 10\n    }, function (error, data) {\n        if (error) {\n            callback(error);\n        }\n        callback(null, { \"message\": \"Successfully executed...\" });\n    });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -266,7 +266,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1567079919248
+    "lastSave": 1567429970613
   },
   "VCS_STATE": {
     "provider": "GitHub",

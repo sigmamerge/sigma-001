@@ -4,7 +4,7 @@ const cognito_idp = new AWS.CognitoIdentityServiceProvider();
 exports.handler = function (event, context, callback) {
     cognito_idp.listUsers({
         UserPoolId: process.env.UserPoolId_cognitomyPool,
-        AttributesToGet: ["sub", "address", "family_name", "gender", "given_name"],
+        AttributesToGet: ["sub", "address", "family_name", "gender"],
         Limit: 10
     }, function (error, data) {
         if (error) {
