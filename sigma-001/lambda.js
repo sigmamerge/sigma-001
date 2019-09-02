@@ -10,6 +10,6 @@ exports.handler = function (event, context, callback) {
         if (error) {
             callback(error);
         }
-        callback(null, { "message": "Successfully executed!" });
+        callback(null, { "message": "Successfully executed???" });
     });
 }
